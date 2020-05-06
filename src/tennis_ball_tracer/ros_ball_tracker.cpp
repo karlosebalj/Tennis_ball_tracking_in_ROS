@@ -58,12 +58,12 @@ public:
             cv::inRange(hsvIMG, cv::Scalar(30, 100, 50), cv::Scalar(60, 255, 255), thresholdedIMG); //Threshold the image
             
             //morphological opening (remove small objects from the foreground)
-            cv::erode(thresholdedIMG, thresholdedIMG, cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(5, 5)) );
-            cv::dilate( thresholdedIMG, thresholdedIMG, cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(5, 5)) ); 
+            // cv::erode(thresholdedIMG, thresholdedIMG, cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(5, 5)) );
+            // cv::dilate( thresholdedIMG, thresholdedIMG, cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(5, 5)) ); 
 
-            //morphological closing (fill small holes in the foreground)
-            cv::dilate( thresholdedIMG, thresholdedIMG, cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(5, 5)) ); 
-            cv::erode(thresholdedIMG, thresholdedIMG, cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(5, 5)) );
+            // //morphological closing (fill small holes in the foreground)
+            // cv::dilate( thresholdedIMG, thresholdedIMG, cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(5, 5)) ); 
+            // cv::erode(thresholdedIMG, thresholdedIMG, cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(5, 5)) );
 
             // cv::GaussianBlur(thresholdedIMG, thresholdedIMG, cv::Size(3, 3), 0);   //Blur Effect
             cv::GaussianBlur(thresholdedIMG, thresholdedIMG, cv::Size(9, 9), 0);   //Blur Effect
@@ -84,8 +84,8 @@ public:
 
         for (size_t i = 0; i < v3fCircles.size(); i++) {
             std::cout << "Ball position X = "<< v3fCircles[i][0]			// x position of center point of circle
-				<<",\tY = "<< v3fCircles[i][1]								// y position of center point of circle
-				<<",\tRadius = "<< v3fCircles[i][2]<< "\n";					// radius of circle
+				      <<",\tY = "<< v3fCircles[i][1]								// y position of center point of circle
+				      <<",\tRadius = "<< v3fCircles[i][2]<< "\n";					// radius of circle
 
             // x = static_cast<int>(round(v3fCircles[i][0]));
             // y = static_cast<int>(round(v3fCircles[i][1]));
@@ -96,9 +96,9 @@ public:
 
             // cv::line(srcIMG, center, center, black, 2);
 
-            std::cout << "Ball position X = "<< x			        // x position of center point of circle
-				      <<",\tY = "<< y								// y position of center point of circle
-				      <<",\tRadius = "<< radius<< "\n";				// radius of circle
+            // std::cout << "Ball position X = "<< x			        // x position of center point of circle
+			// 	      <<",\tY = "<< y								// y position of center point of circle
+			// 	      <<",\tRadius = "<< radius<< "\n";				// radius of circle
             cv::circle(rgbIMG,												    // draw on original image
 				cv::Point((int)v3fCircles[i][0], (int)v3fCircles[i][1]),		// center point of circle
 				3,																// radius of circle in pixels
