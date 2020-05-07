@@ -244,4 +244,11 @@ add_executable(image_parameter_setter src/tennis_ball_tracer/image_parameter_set
 target_link_libraries(image_parameter_setter ${catkin_LIBRARIES})
 target_link_libraries(image_parameter_setter ${OpenCV_LIBRARIES})
 
+add_executable(robot_movement_publisher src/robot_movement/robot_movement_publisher.cpp)
+target_link_libraries(robot_movement_publisher ${catkin_LIBRARIES})
+
+add_executable(robot_position src/robot_movement/robot_position.cpp)
+target_link_libraries(robot_position ${catkin_LIBRARIES})
+
+
 
