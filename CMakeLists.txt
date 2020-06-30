@@ -250,8 +250,8 @@ target_link_libraries(robot_movement_publisher ${catkin_LIBRARIES})
 add_executable(robot_position src/robot_movement/robot_position.cpp)
 target_link_libraries(robot_position ${catkin_LIBRARIES})
 
-add_executable(robot_algorithms src/robot_movement/robot_algorithms.cpp)
-target_link_libraries(robot_algorithms ${catkin_LIBRARIES})
+add_executable(robot_control src/robot_movement/robot_control.cpp)
+target_link_libraries(robot_control ${catkin_LIBRARIES})
 
 
 

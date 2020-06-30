@@ -55,7 +55,18 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "unordered_set": "cpp",
-        "mutex": "cpp"
+        "mutex": "cpp",
+        "csignal": "cpp",
+        "hash_map": "cpp",
+        "condition_variable": "cpp",
+        "optional": "cpp",
+        "string_view": "cpp",
+        "iterator": "cpp",
+        "map": "cpp",
+        "memory_resource": "cpp",
+        "random": "cpp",
+        "set": "cpp",
+        "string": "cpp"
     },
     "python.pythonPath": "/usr/bin/python3.5"
 }
